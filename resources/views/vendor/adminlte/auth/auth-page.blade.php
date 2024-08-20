@@ -1,5 +1,19 @@
 @extends('adminlte::master')
 
+@section('classes_body')
+    login-page
+    custom_background
+@endsection
+<?php
+$randomNumber = rand(1, 12);
+//$wallpaperPath = "/images/home/wallpaper_$randomNumber.png";
+$wallpaperPath = asset("images/home/wallpaper_$randomNumber.png");
+?>
+
+@section('body_style')
+    background-image: url('{{ $wallpaperPath }}');
+@endsection
+
 @php( $dashboard_url = View::getSection('dashboard_url') ?? config('adminlte.dashboard_url', 'home') )
 
 @if (config('adminlte.use_route_url', false))
@@ -16,7 +30,8 @@
 @section('classes_body'){{ ($auth_type ?? 'login') . '-page' }}@stop
 
 @section('body')
-    <div class="{{ $auth_type ?? 'login' }}-box">
+    <div id="particles-js" class="custom_container_particles" style=""></div>
+    <div class="{{ $auth_type ?? 'login' }}-box custom_pane_login">
 
         {{-- Logo --}}
         <div class="{{ $auth_type ?? 'login' }}-logo">
@@ -76,6 +91,12 @@
 @stop
 
 @section('adminlte_js')
+    <script src="{{ asset('js/particles.min.js') }}"></script>
+    <script>
+        particlesJS.load('particles-js', '{{ asset('utils/particlesjs-config.json') }}', function() {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
     @stack('js')
     @yield('js')
 @stop

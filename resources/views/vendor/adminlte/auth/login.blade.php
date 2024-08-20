@@ -1,10 +1,15 @@
+{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    particlesJS.load('particles-js', 'utils/particlesjs-config.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+</script> --}}
+
 @extends('adminlte::auth.auth-page', ['auth_type' => 'login'])
 
-@section('adminlte_css_pre')
-    <link rel="stylesheet" href="{{ asset('vendor/icheck-bootstrap/icheck-bootstrap.min.css') }}">
-@stop
-
 @php( $login_url = View::getSection('login_url') ?? config('adminlte.login_url', 'login') )
+
 @php( $register_url = View::getSection('register_url') ?? config('adminlte.register_url', 'register') )
 @php( $password_reset_url = View::getSection('password_reset_url') ?? config('adminlte.password_reset_url', 'password/reset') )
 
@@ -21,13 +26,14 @@
 @section('auth_header', __('adminlte::adminlte.login_message'))
 
 @section('auth_body')
-    <form action="{{ $login_url }}" method="post">
+    
+<form action="{{ $login_url }}" method="post">
         @csrf
 
         {{-- Email field --}}
         <div class="input-group mb-3">
             <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
-                   value="{{ old('email') }}" placeholder="{{ __('adminlte::adminlte.email') }}" autofocus>
+                value="{{ old('email') }}" placeholder="{{ __('adminlte::adminlte.email') }}" autofocus>
 
             <div class="input-group-append">
                 <div class="input-group-text">
@@ -45,7 +51,7 @@
         {{-- Password field --}}
         <div class="input-group mb-3">
             <input type="password" name="password" class="form-control @error('password') is-invalid @enderror"
-                   placeholder="{{ __('adminlte::adminlte.password') }}">
+                placeholder="{{ __('adminlte::adminlte.password') }}">
 
             <div class="input-group-append">
                 <div class="input-group-text">
@@ -73,7 +79,8 @@
             </div>
 
             <div class="col-5">
-                <button type=submit class="btn btn-block {{ config('adminlte.classes_auth_btn', 'btn-flat btn-primary') }}">
+                <button type=submit
+                    class="btn btn-block {{ config('adminlte.classes_auth_btn', 'btn-flat btn-primary') }}">
                     <span class="fas fa-sign-in-alt"></span>
                     {{ __('adminlte::adminlte.sign_in') }}
                 </button>
@@ -81,6 +88,7 @@
         </div>
 
     </form>
+    
 @stop
 
 @section('auth_footer')
