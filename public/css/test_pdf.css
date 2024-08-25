@@ -1,0 +1,28 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 10px 5px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#tab_uno {
+    width: 50%;
+}
+
+#cabecera_pdf {
+    background-color: rgb(228, 228, 228);
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}

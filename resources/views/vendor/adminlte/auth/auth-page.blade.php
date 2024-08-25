@@ -7,7 +7,7 @@
 <?php
 $randomNumber = rand(1, 12);
 //$wallpaperPath = "/images/home/wallpaper_$randomNumber.png";
-$wallpaperPath = asset("images/home/wallpaper_$randomNumber.png");
+$wallpaperPath = asset("images/gifs/wallpaper_$randomNumber.png");
 ?>
 
 @section('body_style')

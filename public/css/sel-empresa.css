@@ -1,0 +1,13 @@
+
+.container-background {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.main-sidebar {
+    display: none;
+}
+
+.wrapper {
+    display: none;
+}

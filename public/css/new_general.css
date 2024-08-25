@@ -1,0 +1,231 @@
+.custom-body1 > div {
+    width: 100%;
+    max-width: 100%;
+}
+
+.custom_btn {
+    width: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.custom_btn:hover {
+    transform: scale(1.1) rotate(2deg);
+}
+
+.custom-content{
+    background-color: #ffffff;
+    padding-top: 30px !important;
+    padding-right: 20px !important;
+    padding-bottom: 30px !important;
+    padding-left: 20px !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    border-top-left-radius: .25rem !important;
+    border-top-right-radius: .25rem !important;
+
+    border: 2px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    box-shadow: 0 0 1px rgba(0,0,0,.125),0 1px 3px rgba(0,0,0,.2);
+}
+
+.custom_card_header{
+    background-color: #343a40 !important;
+}
+
+.custom_background {
+    background-size: cover;/* Escala la imagen para cubrir toda la pantalla */
+    background-repeat: no-repeat;/* Evita que la imagen se repita */
+    background-position: center;/* Centra la imagen en el área del body */
+    overflow-x: hidden;
+}
+
+.custom_container_particles{
+    position: absolute; /* Establecer posición absoluta */
+    top: 0; /* Alinear en la parte superior */
+    left: 0; /* Alinear en la parte izquierda */
+    width: 100%; /* Ancho al 100% del viewport */
+    height: 100%; /* Altura al 100% del viewport */
+    background-color: rgba(0, 0, 0, 0.1); /* Color de fondo con cierta opacidad */
+}
+
+/* CSS ELENA */
+.table-head-color thead {
+    background-color: #5dade2;
+    color: white;
+}
+/* CARDS DE GRAFICOS*/
+.cards-head-color {
+    background-color: #637682;
+    color: #5dade2;
+}
+
+.info-box-text {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.graficos {
+    position: relative;
+  overflow: hidden;
+  width: 340px;
+  height: 280px;
+  padding: 0px;
+  margin: 0px;
+  border-width: 0px;
+  cursor: pointer;
+}
+
+.tab-pane.active {
+    height: auto;
+}
+
+.tab-pane {
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+.card-graficos {
+    margin-block: 10px;
+}
+
+.card-custom {
+    box-shadow: 0 0 1px rgba(0,0,0,.125),0 1px 3px rgba(0,0,0,.2);
+    border-radius: .25rem;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 1rem;
+    min-height: 80px;
+    padding: .5rem;
+    position: relative;
+    background-color: #637682; 
+    /* background-color: #ae2251; */
+    text-align: center;
+    align-content: center;
+    height: 340px;
+}
+/* CARDS PARA MENÚ EN DETAILS-PROYECTOS */
+.card-custom-menu {
+    box-shadow: 0 0 1px rgba(0,0,0,.125),0 1px 3px rgba(0,0,0,.2);
+    border-radius: .25rem;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 1rem;
+    min-height: 80px;
+    padding: .5rem;
+    position: relative;
+    background-color: #5dade2;
+    text-align: center;
+    align-content: center;
+    height: 100px;
+    width: initial;
+}
+
+.card-custom p{
+    color: #5dade2;
+    font-weight: 500;
+}
+
+.card-custom h6{
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.card-custom-menu h6{
+    color: #ffffff;
+    font-weight: 700;
+  margin-top: 1rem;
+}
+
+.card-custom-menu i{
+    font-size: xx-large;
+}
+
+.btn-app {
+    background-color: #5dade2;
+    border: #5dade2;
+    color: #f3f3f3;
+    display: block;
+    height: 80px;
+    text-align: center;
+    align-content: center;
+    margin: 0 0 10px 0px;;
+}
+
+.btn-app:hover {
+    background-color: #a9d488; /* rgb(203, 42, 144);*/
+    color: #f3f3f3;
+}
+
+.btn-app h6{
+    color: #f3f3f3;
+    font-weight: 500;
+}
+
+.images-custom{
+     width: 250px; 
+     height: 200px; 
+}
+
+.galeria-a p{
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.galeria-a:hover p{
+        color: #1070ff; 
+}
+
+
+.custom-section-forms{
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#myChartP {
+    height: 100px;
+    width: 200px;
+    
+  }
+
+.card-custom canvas{
+    height: 200px;
+    width: 200px;
+}
+
+.card-custom-general {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+.hscroll {
+    overflow-x: auto; /* Horizontal */
+  }
+
+/* .cabeceras_pdf {
+    background-color: #5dade2;
+    color: white;
+    font-weight: 400px;
+} */
+
+.custom_estado {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 20px;
+    display: inline-flex;
+    padding: 5px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+/* #gantt_here{
+    height: 100%;
+    width: 100%;
+    padding:0px;
+    margin:0px;
+    overflow: hidden;
+} */

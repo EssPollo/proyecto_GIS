@@ -1,0 +1,15 @@
+.custom-section{
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.contenedor_send_email{
+    background-color: #F4F4F4;
+    padding-top: 1rem !important;
+    padding-right: 1rem !important;
+    padding-bottom: 1rem !important;
+    padding-left: 1rem !important;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    box-shadow: 0 0 1px rgba(0,0,0,.125),0 1px 3px rgba(0,0,0,.2);
+}
