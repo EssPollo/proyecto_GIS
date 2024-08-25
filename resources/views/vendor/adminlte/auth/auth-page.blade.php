@@ -5,9 +5,9 @@
     custom_background
 @endsection
 <?php
-$randomNumber = rand(1, 12);
+$randomNumber = rand(1, 5);
 //$wallpaperPath = "/images/home/wallpaper_$randomNumber.png";
-$wallpaperPath = asset("images/gifs/wallpaper_$randomNumber.png");
+$wallpaperPath = asset("images/gifs/wallpaper_$randomNumber.gif");
 ?>
 
 @section('body_style')
