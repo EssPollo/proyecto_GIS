@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -21,11 +22,27 @@ class LoginController extends Controller
     use AuthenticatesUsers;
 
     /**
-     * Where to redirect users after login.
+     * Redirigir a los usuarios después de iniciar sesión según su rol.
      *
-     * @var string
+     * @return string
      */
-    protected $redirectTo = '/empresa/seleccionar-empresa';
+    protected function redirectTo()
+    {
+        $role = Auth::user()->roles->pluck('name')->first(); // Obtener el nombre del rol del usuario
+
+        // Dependiendo del rol, redirigir a la ruta correspondiente
+        switch ($role) {
+            case 'Admin':
+                return '/admin';
+            case 'Doctor':
+                return '/doctor';
+            case 'Farmaceutico':
+                return '/farmaceutico';
+            default:
+                return '/home'; // Ruta predeterminada si no coincide ningún rol
+        }
+    }
+    
 
     /**
      * Create a new controller instance.
