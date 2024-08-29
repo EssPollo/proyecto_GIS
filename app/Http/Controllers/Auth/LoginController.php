@@ -35,7 +35,7 @@ class LoginController extends Controller
         // Dependiendo del rol, redirigir a la ruta correspondiente
         switch ($role) {
             case 'Admin':
-                return '/admin';
+                return 'admin';
             case 'Doctor':
                 return '/doctor';
             case 'Farmaceutico':
