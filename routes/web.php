@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\FarmaceuticoController;
+
 /*
 Route::get('/', function () {
     return view('welcome');
@@ -21,8 +24,18 @@ Route::resource('admin',AdminController::class)
     'index' => 'admin.index', 
     'create' => 'admin.create',
     'store' => 'admin.store'
-    ])->middleware('custom.auth');
+])->middleware('custom.auth');
 
-//Route::get('/admin', function () {    return "Admin Dashboard (En construccion)";})->name('admin');
-Route::get('/doctor', function () {    return "Doctor Dashboard (En construccion)";})->name('doctor');
-Route::get('/farmaceutico', function () {    return "Farmacutico Dashboard (En construccion)";})->name('farmaceutico');
+Route::resource('doctor',DoctorController::class)
+    ->only(['index', 'create', 'edit','destroy','show','update','store'])->names([
+    'index' => 'admin.index', 
+    'create' => 'admin.create',
+    'store' => 'admin.store'
+])->middleware('custom.auth');
+    
+Route::resource('farmaceutico',FarmaceuticoController::class)
+    ->only(['index', 'create', 'edit','destroy','show','update','store'])->names([
+    'index' => 'admin.index', 
+    'create' => 'admin.create',
+    'store' => 'admin.store'
+])->middleware('custom.auth');

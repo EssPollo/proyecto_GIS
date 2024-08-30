@@ -4,15 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class DoctorController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index(Request $request )
     {
         //dd($request->all());
-        return view('admin.index');
+        return view('doctor.index');
     }
 
     /**
