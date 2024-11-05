@@ -1,15 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 
 class DoctorController extends Controller
 {
-    public function index(Request $request )
+    public function index(User $usuario)
     {
-        //dd($request->all());
-        return view('doctor.index');
+        //dd($usuario);
+        //$usuario = User::find($usuario->id);
+        $is_disabled = false;
+
+        return view('doctor.index', compact('is_disabled'));
     }
 
     /**
