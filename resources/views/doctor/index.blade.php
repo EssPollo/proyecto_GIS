@@ -4,7 +4,7 @@
 @stop
 
 @section('content_header')
-    <h1 class="m-0 text-dark">Bienvenido Doctor: Prueba</h1>
+    <h1 class="m-0 text-dark">Bienvenido Doctor: {{$doctor->name}}</h1>
 @stop
 
 
@@ -15,12 +15,12 @@
         <div class="row">
             <div class="col-sm-3">
                 <x-adminlte-callout class="card-custom">
-                    <h6>Presupuesto total</h6>
-                        <p>$1,000,000.00</p>
-                        <h6>Presupuesto pendiente a pagar</h6>
-                        <p>$0.00</p>
-                        <h6>Presupuesto liquidado</h6>
-                        <p>$7,649,402.94</p>
+                    <h6>Pcientes  el dia de hoy</h6>
+                        <p>80</p>
+                        <h6>Pacientes por atender</h6>
+                        <p>23</p>
+                        <h6>Pacientes finalizados</h6>
+                        <p>57</p>
                 </x-adminlte-callout>
             </div>
             <div class="col-sm-3">
@@ -43,8 +43,8 @@
             </div>
             <div class="col-sm-3">
                 <x-adminlte-callout class="card-custom">
-                        <h6>Pagado</h6>
-                        <p>$7,649,402.94</p>
+                        <h6>Nomina</h6>
+                        <p>$15,480</p>
                         <h6>Transf. entrantes</h6>
                         <p>$5,736.48</p>
                         <h6>Cobrado</h6>
@@ -57,14 +57,20 @@
                     <tbody>
                         <tr>
                             <td>
-                                <a class="btn btn-app">
+                                <a class="btn btn-app" href= "{{ route('paciente.index')}}" > 
                                     <i class="fas fa-wallet fa-4x text-white"></i>
                                     <h6>PACIENTES</h6>
                                 </a>
                             </td>
                             <td>
+                                <a class="btn btn-app" href= "{{ route('fotos.index')}}">
+                                    <i class="fas fa-image fa-4x text-white"></i>
+                                    <h6>FOTOS</h6>
+                                </a>
+                            </td>
+                            <td>
                                 <a class="btn btn-app" >
-                                    <i class="fas fa-save text-white"></i>
+                                    <i class="fas fa-save text-white" ></i>
                                     <h6>BITÁCORAS</h6>
                                 </a>
 

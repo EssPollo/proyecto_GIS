@@ -16,7 +16,9 @@ class DatabaseSeeder extends Seeder
         // llamar a otros sedders
         $this->call([ 
             RoleSeeder::class,
-            UserSeeder::class
+            UserSeeder::class,
+            ProyectoSeeder::class,
+            PacienteSeeder::class
         ]);
     }
 }

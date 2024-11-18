@@ -2,23 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Proyecto;
-use App\Models\User;
-use Brian2694\Toastr\Facades\Toastr;
-use Spatie\Permission\Models\Role;
 use Illuminate\Http\Request;
+use App\Models\User; 
+use App\Models\Paciente;
 
-
-
-class DoctorController extends Controller
+class PacienteController extends Controller
 {
-    public function index(User $user)
+    /**
+     * Display a listing of the resource.
+     */
+    public function index(Request $request)
     {
-        $doctores = User::role('Doctor')->get();
-        $doctor = User::role('Doctor')->first();
-       //$is_disabled = false;
-
-        return view('doctor.index', compact('doctores','doctor'));
+       // Obtén el usuario autenticado 
+       $doctor = auth()->user(); 
+       // Obtén los pacientes del doctor 
+       $pacientes = $doctor->patients;
+        return view('paciente.index',compact('pacientes', 'doctor') );
     }
 
     /**
@@ -27,7 +26,6 @@ class DoctorController extends Controller
     public function create()
     {
         //
-       
     }
 
     /**
@@ -60,7 +58,6 @@ class DoctorController extends Controller
     public function update(Request $request, string $id)
     {
         //
-
     }
 
     /**

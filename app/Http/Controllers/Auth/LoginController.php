@@ -37,9 +37,9 @@ class LoginController extends Controller
             case 'Admin':
                 return 'admin';
             case 'Doctor':
-                return '/doctor';
+                return 'doctor';
             case 'Farmaceutico':
-                return '/farmaceutico';
+                return 'farmaceutico';
             default:
                 return '/home'; // Ruta predeterminada si no coincide ningún rol
         }

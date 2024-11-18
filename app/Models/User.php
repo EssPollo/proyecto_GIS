@@ -55,5 +55,10 @@ class User extends Authenticatable
     {
         return 'admin/users/cuenta';
     }
+
+    // Definir la relación con Paciente 
+    public function pacientes() { 
+        return $this->hasMany(Paciente::class, 'doctor_id'); 
+    }
 }
 

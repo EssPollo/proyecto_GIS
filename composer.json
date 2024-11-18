@@ -7,10 +7,14 @@
     "require": {
         "php": "^8.2",
         "brian2694/laravel-toastr": "^5.59",
+        "dhtmlx/connector-php": "^3.0",
+        "dompdf/dompdf": "^3.0",
         "jeroennoten/laravel-adminlte": "^3.13",
-        "laravel/framework": "^11.9",
+        "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
         "laravel/ui": "^4.5",
+        "realrashid/sweet-alert": "^7.2",
+        "spatie/laravel-html": "^3.11",
         "spatie/laravel-permission": "^6.9"
     },
     "require-dev": {

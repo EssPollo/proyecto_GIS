@@ -32,8 +32,8 @@ class UserSeeder extends Seeder
             'estado' => true,
         ])->assignRole('Farmaceutico');
         User::create([
-            'name' => 'Doctor',
-            'username' => 'Doc',
+            'name' => 'Ramìrez',
+            'username' => 'Doc. Ramirez',
             'ap_paterno' => 'no tiene',
             'ap_materno' => 'no tiene',
             'email' => 'doctor@gmail.com',
