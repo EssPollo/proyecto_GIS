@@ -10,6 +10,7 @@
         "dhtmlx/connector-php": "^3.0",
         "dompdf/dompdf": "^3.0",
         "jeroennoten/laravel-adminlte": "^3.13",
+        "laravel-notification-channels/telegram": "^5.0",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
         "laravel/ui": "^4.5",

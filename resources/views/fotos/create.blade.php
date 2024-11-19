@@ -1,7 +1,15 @@
 @extends('adminlte::page')
 
 @section('content_header')
-    <h1 class="m-0 text-dark">Crea una nueva Evidencia</h1>
+<div class="col-sm-6-left">
+    <h1 class="m-0 text-dark">Crea una nueva Evidencia Fotográfica</h1>
+    <ol class="breadcrumb float-sm-left">
+        <li class="breadcrumb-item"><a href="{{ route('doctor.index') }}">Menú principal</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('fotos.index') }}">Evidencias Fotograficas</a></li>
+        <li class="breadcrumb-item active">Galería</li>
+    </ol>
+</div>
+<br>
 @stop
 
 @section('content')

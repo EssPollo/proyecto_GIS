@@ -24,18 +24,69 @@
     {!! Toastr::message() !!}
     <div class="card">
         <div class="card-body">
-            <x-adminlte-datatable class="table-head-color" id="table1" :heads="['Nombre', 'Apellido paterno', 'Apellido materno']" theme="light" striped hoverable>
+            <x-adminlte-datatable class="table-head-color" id="table1" :heads="['Nombre', 'Apellido paterno', 'Apellido materno','Historial','Evidencia Fotográfica']" theme="light" striped hoverable>
                     <tr>
                         <td>Alan</td>
                         <td>Ramirez</td>
                         <td>Navarrete</td>
-                    
+                        <td>
+                            <img src="{{ asset('images/icons/btn_ver.png') }}" class="custom_btn" alt="Detalles"
+                                    onclick="simulateClickById('Detalles_')">
+                            
+                                    <a id="Detalles_"
+                                        href="{{ route('historial.index') }}"
+                                        class="btn btn-sm btn-primary mx-1 shadow" title="Detalles" style="display: none;">
+                                        Foto
+                                    </a>
+                        </td>
+                        <td>
+                            <img src="{{ asset('images/icons/btn_foto.png') }}" class="custom_btn" alt="Fotografia"
+                            onclick="simulateClickById('Fotografia_')">
+                        </td>
+                        <a id="Fotografia_"
+                        href="{{ route('fotos.paciente') }}"
+                        class="btn btn-sm btn-primary mx-1 shadow" title="Detalles" style="display: none;">
+                        Foto
+                    </a>
                     </tr>
                     <tr>
                         <td>Karla</td>
                         <td>Cruz</td>
                         <td>Hernandez</td>
-                    
+                        <td>
+                            <img src="{{ asset('images/icons/btn_ver.png') }}" class="custom_btn" alt="Detalles"
+                                    onclick="simulateClickById('#')">
+                        </td>
+                        <td>
+                            <img src="{{ asset('images/icons/btn_foto.png') }}" class="custom_btn" alt="Fotografia"
+                            onclick="document.getElementById('#').submit();">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Guadalupe</td>
+                        <td>Navarrete</td>
+                        <td>Tovar</td>
+                        <td>
+                            <img src="{{ asset('images/icons/btn_ver.png') }}" class="custom_btn" alt="Detalles"
+                                    onclick="simulateClickById('#')">
+                        </td>
+                        <td>
+                            <img src="{{ asset('images/icons/btn_foto.png') }}" class="custom_btn" alt="Fotografia"
+                            onclick="document.getElementById('#').submit();">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Amelie</td>
+                        <td>Ramírez</td>
+                        <td>Cruz</td>
+                        <td>
+                            <img src="{{ asset('images/icons/btn_ver.png') }}" class="custom_btn" alt="Detalles"
+                                    onclick="simulateClickById('#')">
+                        </td>
+                        <td>
+                            <img src="{{ asset('images/icons/btn_foto.png') }}" class="custom_btn" alt="Fotografia"
+                            onclick="document.getElementById('#').submit();">
+                        </td>
                     </tr>
             </x-adminlte-datatable>
         </div>

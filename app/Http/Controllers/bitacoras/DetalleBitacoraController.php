@@ -16,20 +16,21 @@ class DetalleBitacoraController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index($proyecto_id, $bitacora_id)
+    public function index()
     {
-        $entradas_detalles_bitacora = DetalleBitacora::where('bitacora_id', $bitacora_id)
-        ->with('usuario')
-        ->orderBy('fecha','asc')
-        -> get();
+        
         $heads = [
-            'No.',
-            'Entradas/Observaciones',
-            'Fecha',
-            'Usuario',
+            'Enfermedad',
+            'Primer Ingreso',
+            'Fecha de consulta',
+            'Detalles de su evolucion',
+            'Medicamentos a tomar',
+            'Cantidad a tomar',
+            'Dosis por día',
+            
         ];
 
-        return view('bitacoras.details', compact('proyecto_id','bitacora_id', 'entradas_detalles_bitacora', 'heads'));
+        return view('historial.details', compact( 'heads'));
     }
 
     /**

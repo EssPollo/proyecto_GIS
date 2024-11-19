@@ -97,6 +97,7 @@ class fotosController extends Controller
     public function show(string $id)
     {
         //
+       
     }
 
     /**
@@ -132,5 +133,10 @@ class fotosController extends Controller
         } else {
             return response()->json(['error' => 'No image uploaded'], 400);
         }
+    }
+
+    public function fotoPaciente ()
+    {
+        return view('fotos.show');
     }
 }

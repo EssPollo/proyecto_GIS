@@ -12,6 +12,8 @@ use App\Http\Controllers\bitacoras\BitacoraController;
 use App\Http\Controllers\bitacoras\DetalleBitacoraController;
 use App\Http\Controllers\PacienteController;
 use App\Http\Controllers\fotosController;
+use App\Http\Controllers\UsuarioController;
+
 /*
 Route::get('/', function () {
     return view('welcome');
@@ -90,25 +92,32 @@ Route::resource('proyectos/{proyecto_id}/bitacoras', BitacoraController::class)
     ->middleware('custom.auth');
 
 /*DETALLES DE BITACORA*/
-Route::resource('proyectos/{proyecto_id}/bitacoras/{bitacora_id}/detalles', DetalleBitacoraController::class)
+Route::resource('historial_paciente', DetalleBitacoraController::class)
     ->only(['index', 'create', 'store', 'edit', 'update', 'destroy','show'])
     ->names([
-        'index' => 'proyectos.bitacoras.detalles.index',
-        'create' => 'proyectos.bitacoras.detalles.create',
-        'store' => 'proyectos.bitacoras.detalles.store',
-        'edit' => 'proyectos.bitacoras.detalles.edit',
-        'update' => 'proyectos.bitacoras.detalles.update',
-        'destroy' => 'proyectos.bitacoras.detalles.destroy',
-        'show' => 'proyectos.bitacoras.detalles.show',
+        'index' => 'historial.index',
     ])
     ->middleware('custom.auth');
 
 Route::resource('fotos', FotosController::class)
-    ->only(['index', 'create', 'store', 'edit', 'update', 'destroy','show'])
+    ->only(['index', 'create', 'store', 'edit', 'update', 'destroy','show','fotoPaciente'])
     ->names([
         'index' => 'fotos.index',
         'create' => 'fotos.create',
         'store' => 'fotos.store',
+
     ])
     ->middleware('custom.auth');
 Route::post('fotos/upload', [FotosController::class, 'uploadImage'])->name('fotos.upload');
+Route::get('fotos_paciente', [FotosController::class, 'fotoPaciente'])->name('fotos.paciente');
+
+/*Ususrio*/
+Route::resource('usuario', UsuarioController::class)
+    ->only(['index', 'create', 'show', 'store', 'edit', 'update', 'destroy'])
+    ->names([
+        'index' => 'usuario.index',
+        'create' => 'usuario.create',
+
+
+    ])
+    ->middleware('custom.auth');

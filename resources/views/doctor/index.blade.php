@@ -4,7 +4,7 @@
 @stop
 
 @section('content_header')
-    <h1 class="m-0 text-dark">Bienvenido Doctor: {{$doctor->name}}</h1>
+    <h1 class="m-0 text-dark">Bienvenido Doctora Marilyn Cote</h1>
 @stop
 
 
@@ -14,6 +14,16 @@
 
         <div class="row">
             <div class="col-sm-3">
+                
+                <div class="filtr-item col-sm-3" data-category="1" data-sort="white sample">
+                    <a class="galeria-a" data-toggle="lightbox"
+                        data-title="Evidencia Fotográfica">
+                        <img src="{{ asset('images/galeria/imagen_8.jpeg') }}" class="images-custom" alt="Evidencia Fotográfica" />
+                    </a>
+                </div>
+            
+        </div>
+            <div class="col-sm-3">
                 <x-adminlte-callout class="card-custom">
                     <h6>Pcientes  el dia de hoy</h6>
                         <p>80</p>
@@ -21,14 +31,6 @@
                         <p>23</p>
                         <h6>Pacientes finalizados</h6>
                         <p>57</p>
-                </x-adminlte-callout>
-            </div>
-            <div class="col-sm-3">
-                <x-adminlte-callout class="card-custom">
-                        <div class="chart tab-pane active" id="revenue-chart" style="position: flex; height: 300px;">
-                            <canvas id="myChartP" height="250px" width="250px" style="height: 250px; width: 250px;"
-                                width="845" class="chartjs-render-monitor"></canvas>
-                        </div>
                 </x-adminlte-callout>
             </div>
             <div class="col-sm-3">
@@ -68,13 +70,7 @@
                                     <h6>FOTOS</h6>
                                 </a>
                             </td>
-                            <td>
-                                <a class="btn btn-app" >
-                                    <i class="fas fa-save text-white" ></i>
-                                    <h6>BITÁCORAS</h6>
-                                </a>
-
-                            </td>
+                            
                         </tr>
                     </tbody>
                 </table>

@@ -7,10 +7,11 @@
 
 @section('content_header')
     <div class="col-sm-6-left">
-        <h1 class="m-0 text-dark">Evidencia Fotográfica de los Pacientes</h1>
+        <h1 class="m-0 text-dark">Evidencia Fotográfica del paciente Alan Ramírez</h1>
         <ol class="breadcrumb float-sm-left">
             <li class="breadcrumb-item"><a href="{{ route('doctor.index') }}">Menú principal</a></li>
-            <li class="breadcrumb-item active">Galería</li>
+            <li class="breadcrumb-item"><a href="{{ route('paciente.index') }}">Pacientes del día</a></li>
+            <li class="breadcrumb-item active">Galería del paciente Alan Ramírez</li>
         </ol>
     </div>
     <br>
@@ -26,10 +27,10 @@
     <div class="card card-primary">
         <div class="card-body">
             <div class="row">
-                @foreach (['imagen_1', 'imagen_2', 'imagen_3', 'imagen_4', 'imagen_5', 'imagen_6', 'imagen_7'] as $index => $image)
+                @foreach (['mismo_1', 'mismo_2'] as $index => $image)
                     <div class="filtr-item col-sm-3" data-category="1" data-sort="white sample">
-                        <a href="{{ asset("images/galeria/$image.jpeg") }}" data-toggle="lightbox" data-gallery="gallery" data-title="Evidencia {{ $index + 1 }}">
-                            <img src="{{ asset("images/galeria/$image.jpeg") }}" class="images-custom" alt="Evidencia {{ $index + 1 }}" />
+                        <a href="{{ asset("images/paciente/$image.jpg") }}" data-toggle="lightbox" data-gallery="gallery" data-title="Evidencia {{ $index + 1 }}">
+                            <img src="{{ asset("images/paciente/$image.jpg") }}" class="images-custom" alt="Evidencia {{ $index + 1 }}" />
                             <p>Evidencia {{ $index + 1 }}</p>
                         </a>
                     </div>
