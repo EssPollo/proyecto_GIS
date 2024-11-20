@@ -27,6 +27,7 @@ class DoctorController extends Controller
     public function create()
     {
         //
+        return view('farmaceutico.create');
        
     }
 

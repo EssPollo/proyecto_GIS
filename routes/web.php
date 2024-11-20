@@ -58,6 +58,7 @@ Route::resource('paciente', PacienteController::class)
         'store' => 'paciente.store',
     ])
     ->middleware('custom.auth');
+Route::get('paciente_PDF', [PacienteController::class, 'PacientePDF'])->name('paciente.PDF');
 
 
 

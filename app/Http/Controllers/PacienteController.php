@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Paciente;
 use App\Notifications\NotificacionBotTelegram;
 use Brian2694\Toastr\Facades\Toastr;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class PacienteController extends Controller
 {
@@ -108,5 +109,13 @@ class PacienteController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function PacientePDF()
+    {
+
+        $pdf = PDF::loadView('paciente.pdf');
+        return $pdf->stream();
+
     }
 }

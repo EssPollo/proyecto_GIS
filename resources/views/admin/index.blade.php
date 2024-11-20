@@ -48,6 +48,12 @@
                                     <h6>Generar nueva cita</h6>
                                 </a>
                             </td>
+                            <td>
+                                <a class="btn btn-app" href= "{{ route('paciente.PDF')}}" > 
+                                    <i class="fas fa-wallet fa-4x text-white"></i>
+                                    <h6>Generar Receta Medica</h6>
+                                </a>
+                            </td>
                             
                         </tr>
                     </tbody>

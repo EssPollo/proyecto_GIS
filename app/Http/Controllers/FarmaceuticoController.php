@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Brian2694\Toastr\Facades\Toastr;
 
 class FarmaceuticoController extends Controller
 {
@@ -13,6 +14,7 @@ class FarmaceuticoController extends Controller
     {
         //
         //dd($request->all());
+        Toastr::success('Login Exitoso', 'Éxito');
         return view('farmaceutico.index');
     }
 
@@ -22,6 +24,8 @@ class FarmaceuticoController extends Controller
     public function create()
     {
         //
+        Toastr::success('Medicamentos a suministrar', 'Éxito');
+        return view('farmaceutico.create');
     }
 
     /**
